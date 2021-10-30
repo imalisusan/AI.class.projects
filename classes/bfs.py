@@ -7,7 +7,7 @@ class BfsTraverser:
   def BFS(self,graph, start_node, goal_node):
     queue = []
     queue.append(start_node)
-    #print(queue)
+    
     #set of visited nodes
     self.visited.append(start_node)
     while queue and not self.end_search: 
