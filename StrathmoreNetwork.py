@@ -20,7 +20,6 @@ G.add_edge("Phase Three","Parking Lot",weight="350")
 G.add_edge("STC","Parking Lot",weight="250")
 G.add_edge("Madaraka","Parking Lot",weight="700")
 
-
 #position the nodes to resemble Nairobis map
 G.nodes["Sports Complex"]['pos']=(0,0)
 G.nodes["Siwaka"]['pos']=(2,0)
