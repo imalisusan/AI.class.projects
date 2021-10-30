@@ -4,23 +4,18 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 class Graph:
-    def __init__(self, directed): 
+    def __init__(self): 
         """Parametrized constructor of class Graph 
         which takes True if Graph is directed otherwise it takes False"""
         self.graph =  defaultdict(list)
-        self.directed = directed
 
     def add_edge(self, u, v, weight):
         """Add Edges between two nodes along 
         with weight as Algorithm is of UCS"""
-        if self.directed:
-            value = (weight, v)
-            self.graph[u].append(value)
-        else:
-            value = (weight, v)
-            self.graph[u].append(value)
-            value = (weight, u)
-            self.graph[v].append(value)
+        value = (weight, v)
+        self.graph[u].append(value)
+        value = (weight, u)
+        self.graph[v].append(value)
 
     def ucs(self, current_node, goal_node):
         """It takes starting node and 
